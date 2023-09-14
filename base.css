@@ -13,18 +13,12 @@ body {
 
 /* Style the header section */
 header {
-  background-color: #f3f3f7;
+  background-color: #616177;
   color: #10032e;
   padding: 20px;
   display: flex;
   align-items: center;
 }
-
-header h1{
-  background-color: #10032e;
-  color: #f3f3f7;
-}
-
 
 header img {
   max-width: 100px;
@@ -39,7 +33,7 @@ header h1 {
 
 /* Style the navigation menu */
 nav {
-  background-color: #011830;
+  background-color: hsl(211, 93%, 11%);
   padding: 10px;
   text-align: center;
 }

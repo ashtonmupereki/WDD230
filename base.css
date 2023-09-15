@@ -101,7 +101,7 @@ footer {
 }
 
 footer p:first-child {
-  color: #fff;
+  color: yellow;
 }
 
 footer p:not(:first-child) {

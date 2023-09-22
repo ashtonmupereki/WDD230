@@ -13,8 +13,8 @@ body {
 
 /* Style the header section */
 header {
-  background-color: #616177;
-  color: #10032e;
+  background-color: hsl(211, 93%, 11%);
+  color: #f8f7fa;
   padding: 20px;
   display: flex;
   align-items: center;
@@ -33,10 +33,13 @@ header h1 {
 
 /* Style the navigation menu */
 nav {
-  background-color: hsl(211, 93%, 11%);
+  background-color: hsl(210, 100%, 2%);
   padding: 10px;
   text-align: center;
+  display: flex; /* Use flexbox */
+  justify-content: center; /* Center the items horizontally */
 }
+
 
 nav li {
   display: block;
@@ -50,6 +53,11 @@ ul li{
 nav ul {
   padding: 0;
   text-align: left; /* Align the list items to the left */
+}
+
+nav li {
+  display: flex; /* Use flexbox */
+  justify-content: center; /* Center the items horizontally */
 }
 
 nav a {
@@ -92,6 +100,21 @@ p {
   text-align: center;
 }
 
+/* Custom CSS Normalization */
+
+/* Reset box-sizing to border-box for all elements */
+* {
+  box-sizing: border-box;
+}
+
+
+/* Additional Customizations */
+
+/* Specify a base font size for easier rem unit calculations */
+html {
+  font-size: 16px;
+}
+
 /* Style the footer section */
 footer {
   background-color: #02254b;
@@ -110,4 +133,18 @@ footer p:not(:first-child) {
 
 footer p {
   margin-bottom: 5px;
+}
+
+/* Additional CSS alterations for larger views */
+@media screen and (min-width: 768px) {
+  main {
+    display: flex; /* Use flexbox */
+    flex-wrap: wrap; /* Allow wrapping to multiple rows */
+    justify-content: space-between; /* Distribute items evenly */
+  }
+
+  .Card {
+    width: calc(60% - 25%); /* Set width for two columns with gap */
+    margin-bottom: 20%;
+  }
 }

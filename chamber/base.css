@@ -1,12 +1,12 @@
 body {
-    background-color:coral;
+    background-color:#f5f5f5;
     margin: 0;
     padding: 0;
   }
 
   header{
-    background-color: teal;
-    color: #fff;
+    background-color: rgb(5, 117, 63);
+    color: #180341;
     padding: 10px;
     font-family: Arial, Helvetica, sans-serif;
   }  
@@ -33,9 +33,7 @@ nav ul {
     padding: 0;
   }
 
-  nav{
-    background-color: hsl(152, 89%, 15%);
-  }
+  
 
   nav li {
     margin: 0 10px;
@@ -56,7 +54,7 @@ nav ul {
   }
 
   .left-section {
-    background-color: lightblue;
+    background-color: lightgreen;
     float: left;
     width: 50%;
   }
@@ -74,25 +72,26 @@ nav ul {
   .spotlights {
     padding: 20px;
     color: rgb(41, 1, 41);
+    background-color: #c6fac1c9;
   }
   
   .spotlights h2, .spotlights h4 {
-    color: #333;
+    color: black;
+  }
+  
+  .company-spotlights {
+    display: flex;
+    justify-content: space-between;
   }
   
   .company-spotlight {
-    margin-bottom: 45px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    width: 30%;
+    margin-top: 70px;
   }
+
   
-  .company-spotlight a {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #835353;
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 5px;
-  }
   
   /* Weather Card Section Styling */
   .weather-card {
@@ -100,11 +99,12 @@ nav ul {
     justify-content: center;
     align-items: center;
     padding: 20px;
-    background-color:rgb(226, 195, 56);
+    background-color:white;
   }
   
   .weather-card h4 {
-    color: rgb(59, 6, 59);
+    color: white;
+    background-color: green;
   }
   
   .weather-icon img {
@@ -114,8 +114,8 @@ nav ul {
   /* Footer Styling */
   footer {
     text-align: center;
-    color: hsl(0, 100%, 3%);
-    background-color: #f2f2f2;
+    color:white;
+    background-color: #130241;
     font-size: 12px;
     font-family: 'Times New Roman', Times, serif;
   }

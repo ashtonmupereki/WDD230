@@ -1,5 +1,5 @@
 body {
-    background-color:#f5f5f5;
+    
     margin: 0;
     padding: 0;
   }
@@ -206,59 +206,17 @@ nav ul {
     } 
   }
 
-  label{
-    width: 50px;
-    height: 95px;
-    position: relative;
-    display: block;
-    background-color: #f2f2f2;
-    border-radius:80px;
-    box-shadow: inset 0px 3px #00001a, inset opx -5px 15px grey;
-    cursor: pointer;
-    transition: 0.3s;
-  }
+  body {
+    background-color: white;
+    color: black;
+}
 
-  label:after{
-    content: "";
-    width: 80px;
-    height: 80px;
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    background: linear-gradient(180deg,#ffcc89,#d88606);
-    border-radius: 80px;
-    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
-  }
+.dark-mode {
+    background-color: black;
+    color: white;
+}
 
-  input{
-    width: 0;
-    height: 0;
-    visibility: hidden;
-  }
-
-  input:checked + label{
-    background: #242424;
-  }
-
-  input:checked + label:after{
-    left: 300px;
-    transform: translateX(-80%);
-    background: linear-gradient(80deg,#777 #3a3a3a);
-  }
-
-  label:active::after{
-    width: 260px;
-  }
-
-  .background{
-    width:100vw;
-    height: 100vh;
-    background: #fff;
-    z-index:-1;
-    position: absolute;
-    transition: 0.3s;
-  }
-
-  input:checked + label + .background{
-    background: #242424;
-  }
+.light-mode {
+    background-color: white;
+    color: black;
+}

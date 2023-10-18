@@ -20,6 +20,19 @@ header {
   align-items: center;
 }
 
+main {
+  display: flex;
+}
+
+.Card1 {
+  flex-grow: 1;
+  
+}
+
+.Card2 {
+  flex: 1;
+}
+
 header img {
   max-width: 100px;
   height: auto;
@@ -153,11 +166,20 @@ h2 {
   text-align: center;
 }
 
-.Card {
+
+.Card1 {
   background-color: #fff;
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  padding: 20px;
+  padding: 10px;
+  margin-top: 40px;
+}
+
+.Card2 {
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 10px;
   margin-top: 40px;
 }
 
@@ -171,7 +193,7 @@ h3 {
   background-color: #011830;
   color: #fff;
   padding: 10px;
-  text-align: center;
+  text-align:center;
   width: 600;
 }
 
@@ -227,5 +249,45 @@ footer p {
     width: calc(60% - 25%); /* Set width for two columns with gap */
     margin-bottom: 20%;
   }
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+main {
+	max-width: 670px;
+	margin: 0 auto;
+}
+
+.hero {
+	margin: 10px auto;
+	position: relative;
+	border: 1px solid rgba(0,0,0,.1);
+	height: 300px;
+}
+
+.hero img {
+	width: 600px;
+	height: 300px;
+	object-fit: cover;
+}
+
+.herolabel {
+	position: absolute;
+	top: 30px;
+	left: 20px;
+	background: radial-gradient(#fff, #4D5B97);
+	border: 1px solid rgba(0,0,0,.75);
+	padding: 1.5rem;
+	box-shadow: 0 0 3rem #fff;
+	opacity: 0.75;
+	/* Buenas */
+}
+
+.herolabel p {
+	margin: 0;
+	padding: .25rem;
+	font-weight: 500;
+	font-size: 1rem;
+	font-family:"Great Vibes", serif;
 }
 

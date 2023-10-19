@@ -54,13 +54,13 @@ nav ul {
   }
 
   .left-section {
-    background-color: lightgreen;
+    background-color: white;
     float: left;
     width: 50%;
   }
   
   .right-section {
-    background-color: lightgreen;
+    background-color: white;
     float: right;
     width: 45%;
     
@@ -99,12 +99,12 @@ nav ul {
     justify-content: center;
     align-items: center;
     padding: 20px;
-    background-color:white;
+    background-color: white;
   }
   
   .weather-card h4 {
-    color: white;
-    background-color: green;
+    color: black;
+    background-color: white;
   }
   
   .weather-icon img {
@@ -212,8 +212,8 @@ nav ul {
 }
 
 .dark-mode {
-    background-color: black;
-    color: white;
+    background-color: #0000005b;
+    color: rgb(94, 2, 2);
 }
 
 .light-mode {

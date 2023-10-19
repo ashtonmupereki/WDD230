@@ -33,7 +33,7 @@
   
   <header>
     <!-- Header content goes here -->
-    <img src="icon.png" alt="icon">
+    <img src="https://s96.freeconvert.com/task/65313bec4acf3e27469a79c8/icon.webp" alt="icon">
     <nav>
       <!-- Navigation content goes here -->
       <ul class="navigation">
@@ -51,7 +51,10 @@
   <main>
     <section class="hero">
       <!-- Hero image and content goes here -->
-      <img src="hero1.jpg" alt="">
+      <img 
+      srcset="https://byui-cse.github.io/wdd230-course/images/l06/wdd230-org.jpg 3x, https://byui-cse.github.io/wdd230-course/images/l06/wdd230-org.jpg 4x, https://byui-cse.github.io/wdd230-course/images/l06/wdd230-org.jpg 5x"
+      src="https://byui-cse.github.io/wdd230-course/images/l06/wdd230-org.jpg"
+      alt="" />
     </section>
 
     <section class="call-to-action">
@@ -97,23 +100,13 @@
           <a href="#" class="learn-more">Learn More</a>
         </div>
         </div>
-    </section>
-    <section class="weather-card">
-        <!-- Weather card content goes here -->
-        <h4>Weather Forecast</h4>
-    <div class="weather-card">
-      <div class="weather-icon">
-        <img src="partly.jpeg" alt="Weather Icon">
-      </div>
-      <div class="weather-details">
-        <h5>Gweru, Zimbabwe</h5>
-        <p class="temperature">25°C</p>
-        <p class="description">Partly cloudy</p>
-        <p class="humidity">Humidity: 60%</p>
-        <p class="wind-speed">Wind: 10 km/h</p>
-      </div>
-    </div>
-      </section>
+    </section id="weather">
+    <h2>Weather</h2>
+    <p>Temperature: <input type="number" id="temperature"></p>
+    <p>Wind Speed: <input type="number" id="wind-speed"></p>
+    <p>Wind Chill: <span id="wind-chill"></span></p>
+    <button onclick="calculateWindChill()">Calculate Wind Chill</button>
+  </section>
   </main>
 
   <footer>
@@ -131,6 +124,6 @@
 
   <!-- JavaScript scripts -->
   <script src="script.js"></script>
-  
+  <script src="windchill.js"></script>
 </body>
 </html>

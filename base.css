@@ -250,7 +250,24 @@ footer p {
     margin-bottom: 20%;
   }
 }
+/* Existing CSS code */
 
+/* Add the following media query */
+@media (max-width: 600px) {
+  /* Styles for mobile screens */
+
+  /* Reset styles for the main section */
+  main {
+    flex-direction: column;
+  }
+
+  /* Adjust the layout of the cards */
+  .Card1,
+  .Card2 {
+    width: 100%;
+    margin: 0.5rem 0;
+  }
+}
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
 
 main {

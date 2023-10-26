@@ -142,6 +142,80 @@ nav ul {
     }
   }
 
+  @media (max-width: 768px) {
+    /* Modify styling for smaller screens */
+    header {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    nav ul {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    nav li {
+      margin: 5px 0;
+    }
+  
+    .call-to-action {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .spotlights {
+      flex-direction: column;
+      align-items: center; /* Center align the spotlights section */
+    }
+  
+    .current-event,
+    .company-spotlight {
+      width: 100%;
+    }
+  
+    .spotlights h2 {
+      margin-top: 20px; /* Add additional margin to move the heading further down */
+      text-align: center; /* Center align the heading */
+    }
+  }
+  @media (max-width: 768px) {
+    /* Modify styling for smaller screens */
+    header {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    nav ul {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    nav li {
+      margin: 5px 0;
+    }
+  
+    .call-to-action {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .spotlights {
+      flex-direction: column;
+    }
+  
+    .current-events,
+    .company-spotlights {
+      flex-wrap: wrap;
+    }
+  
+    .current-event,
+    .company-spotlight {
+      margin-top: 20px;
+      width: 100%;
+    }
+  }
+
   #menu{
     display: block;
     font-size: 2rem;

@@ -1,0 +1,110 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Standard head and meta content -->
+  <title>Midlands Chamber of Commerce</title>
+  <meta name="description" content="Welcome to the Midlands Chamber of Commerce website.">
+
+  <!-- Author meta tag -->
+  <meta name="author" content="Ashton Mupereki">
+  <link rel="stylesheet" type="text/css" href="base.css">
+
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.jpg">
+
+  <!-- Social media meta settings -->
+  <meta property="og:title" content="Midlands Chamber of Commerce">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="http://example.com/image.jpg">
+  <meta property="og:url" content="http://example.com/">
+  <meta property="og:description" content="Welcome to the Midlands Chamber of Commerce website.">
+
+  <link rel="stylesheet" href="styles.css">
+  <a button id="menu" href="#"></a>
+  
+</head>
+<body>
+  <h3 id="DarkModetext">Dark Mode is OFF</h3>
+  <button onclick="darkMode()">Darkmode</button>
+  <button onclick="lightMode()">LightMode</button>
+  
+  <header>
+    <!-- Header content goes here -->
+    <img src="icon.png" alt="icon">
+    <nav>
+      <!-- Navigation content goes here -->
+      <ul class="navigation">
+        <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">Services</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
+        <li class="nav-item social-link"><a href="https://www.facebook.com"><img src="facebook.png" alt="Facebook"></a></li>
+        <li class="nav-item social-link"><a href="https://www.twitter.com"><img src="twitter.png" alt="Twitter"></a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <div class="sidebar">
+      <!-- Sidebar content goes here -->
+      <h2>Sidebar Content</h2>
+      <p id="sidebar-message"></p>
+      <!-- Add more content as needed -->
+    </div>
+    <div class="image-gallery">
+      <!-- Local photos of interest -->
+      <figure>
+        <img src="ashy1.jpeg" loading="lazy" alt="Image 1">
+        <figcaption>White Waters</figcaption>
+      </figure>
+      <figure>
+        <img src="ashy2.jpeg" loading="lazy" alt="Image 2">
+        <figcaption>Midlands Offices</figcaption>
+      </figure>
+      <figure>
+        <img src="ashy3.jpeg" loading="lazy" alt="Image 3">
+        <figcaption>Midlands Hotel Canvas</figcaption>
+      </figure>
+      <figure>
+        <img src="ashy4.jpeg" loading="lazy" alt="Image 4">
+        <figcaption>Midland Hotel</figcaption>
+      </figure>
+      <figure>
+        <img src="ashy5.jpeg" loading="lazy" alt="Image 5">
+        <figcaption>Midlands Hostels</figcaption>
+      </figure>
+      <figure>
+        <img src="ashy6.jpeg" loading="lazy" alt="Image 6">
+        <figcaption>Midlands Scenery</figcaption>
+      </figure>
+    </div>
+  </main>
+
+  <footer>
+    <!-- Footer content goes here -->
+    <p>Contact information</p>
+    <p>Developed by Ashton Mupereki</p>
+    <p>WDD 230 Project</p>
+    <p>Last modified: <span id="lastModified"></span></p>
+
+    <script>
+      // Dynamically set last modified date
+      document.getElementById('lastModified').textContent = document.lastModified;
+    </script>
+
+    <main>
+        <h1>Dates between visits</h1>
+        <hr>
+        <p><span class="label">Date.now(): </span> <span id="today"></span> &nbsp;<span class="smaller">(milliseconds)</span></p>
+        <hr>
+        <p><span class="label">Days since last visit: </span> <span id="daysleft"></span></p>
+      </main>
+  </footer>
+
+  <!-- JavaScript scripts -->
+  <script src="script.js"></script>
+  <script src="windchill.js"></script>
+</body>
+</html>

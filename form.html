@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Example</title>
+  <link rel="stylesheet" href="form.css">
+</head>
+<body>
+  <header>
+    <!-- Header content for your course home page -->
+    <h1>WDD230 - Web Development</h1>
+    <!-- Other header elements -->
+  </header>
+
+  <nav>
+    <!-- Navigation menu for your course home page -->
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+    <!-- Other navigation elements -->
+  </nav>
+
+  <main>
+    <form method="get" action="record.html">
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" required>
+
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required pattern="[a-zA-Z0-9]{8,}" title="Password must be at least 8 characters long and can only contain alphanumeric characters">
+
+      <label for="confirm-password">Confirm Password:</label>
+      <input type="password" id="confirm-password" name="confirm-password" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required pattern="[a-zA-Z0-9._%+-]+@byui\.edu$" title="Please enter a valid email address from the byui.edu domain">
+
+      <label for="page-rating">Page Rating:</label>
+      <input type="range" id="page-rating" name="page-rating" min="1" max="10" step="1">
+      <output for="page-rating"></output>
+
+      <button type="submit">Submit</button>
+
+      <form method="get" action="record.html"></form>
+    </form>
+  </main>
+
+  <footer>
+    <!-- Footer content for your course home page -->
+    <p>&copy; 2022 BYU-Idaho. All rights reserved.</p>
+    <!-- Other footer elements -->
+  </footer>
+</body>
+</html>

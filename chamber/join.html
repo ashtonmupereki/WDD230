@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Standard head and meta content -->
+  <title>Midlands Chamber of Commerce</title>
+  <meta name="description" content="Welcome to the Midlands Chamber of Commerce website.">
+
+  <!-- Author meta tag -->
+  <meta name="author" content="Ashton Mupereki">
+  <link rel="stylesheet" type="text/css" href="base.css">
+
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.jpg">
+
+  <!-- Social media meta settings -->
+  <meta property="og:title" content="Midlands Chamber of Commerce">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="http://example.com/image.jpg">
+  <meta property="og:url" content="http://example.com/">
+  <meta property="og:description" content="Welcome to the Midlands Chamber of Commerce website.">
+
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+  <a button id="menu" href="#"></a>
+</head>
+<body>
+  <h3 id="DarkModetext">Dark Mode is OFF</h3>
+    <button onclick="darkMode()">Darkmode</button>
+    <button onclick="lightMode()">LightMode</button>
+  
+  <header>
+    <!-- Header content goes here -->
+    <img src="icon.png" alt="icon">
+    <nav>
+      <!-- Navigation content goes here -->
+      <ul class="navigation">
+        <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">Services</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
+        <li class="nav-item social-link"><a href="https://www.facebook.com"><img src="facebook.png" alt="Facebook"></a></li>
+        <li class="nav-item social-link"><a href="https://www.twitter.com"><img src="twitter.png" alt="Twitter"></a></li>
+      </ul>
+    </nav>
+  </header>
+  <h1>Membership Form</h1>
+  <div class="form-container">
+    <form action="thankyou.html" method="get">
+      <label for="first-name">First Name:</label>
+      <input type="text" id="first-name" name="first-name" required>
+
+      <label for="last-name">Last Name:</label>
+      <input type="text" id="last-name" name="last-name" required>
+
+      <label for="position">Title/Position:</label>
+      <input type="text" id="position" name="position" pattern="[a-zA-Z -]{7,}" title="Please enter at least 7 characters consisting of alphabets, hyphens, and spaces." required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" placeholder="example@example.com" required>
+
+      <label for="phone">Mobile Phone:</label>
+      <input type="tel" id="phone" name="phone" required>
+
+      <label for="org-name">Organization Name:</label>
+      <input type="text" id="org-name" name="org-name" required>
+
+      <label for="membership-level">Membership Level:</label>
+      <select id="membership-level" name="membership-level">
+        <option value="NP Membership">NP Membership (Free)</option>
+        <option value="Bronze Membership">Bronze Membership</option>
+        <option value="Silver Membership">Silver Membership</option>
+        <option value="Gold Membership">Gold Membership</option>
+      </select>
+
+      <label for="description">Organization Description:</label>
+      <textarea id="description" name="description"></textarea>
+
+      <input type="hidden" id="timestamp" name="timestamp" value="">
+
+      <button type="submit">Submit</button>
+    </form>
+
+    <div class="membership-benefits">
+      <div>
+        <h3>NP Membership</h3>
+        <ul>
+          <li>No fee</li>
+          <li>Benefit 1</li>
+          <li>Benefit 2</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Bronze Membership</h3>
+        <ul>
+          <li>Benefit 1</li>
+          <li>Benefit 2</li>
+          <li>Benefit 3</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Silver Membership</h3>
+        <ul>
+          <li>Benefit 1</li>
+          <li>Benefit 2</li>
+          <li>Benefit 3</li>
+          <li>Benefit 4</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Gold Membership</h3>
+        <ul>
+          <li>Benefit 1</li>
+          <li>Benefit 2</li>
+          <li>Benefit 3</li>
+          <li>Benefit 4</li>
+          <li>Benefit 5</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <form method="get" action="record.html"></form>
+  <footer>
+    <!-- Footer content goes here -->
+    <p>Contact information</p>
+    <p>Developed by Ashton Mupereki</p>
+    <p>WDD 230 Project</p>
+    <p>Last modified: <span id="lastModified"></span></p>
+
+    <script>
+      // Dynamically set last modified date
+      document.getElementById('lastModified').textContent = document.lastModified;
+      // Set the current timestamp value
+    document.getElementById('timestamp').value = new Date().toISOString();
+    </script>
+  </footer>
+
+  <!-- JavaScript scripts -->
+  <script src="script.js"></script>
+  <script src="windchill.js"></script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+{
+    "lessons": [
+      {
+        "lesson": "01",
+        "links": [
+          {
+            "url": "lesson1/activity1.html",
+            "title": "Introduction to HTML"
+          }
+        ]
+      },
+      {
+        "lesson": "02",
+        "links": [
+          {
+            "url": "lesson2/mediaquery.html",
+            "title": "Media Queries"
+          }
+        ]
+      },
+      {
+        "lesson": "03",
+        "links": [
+          {
+            "url": "lesson3/activity1.html",
+            "title": "Responsive Web Design"
+          }
+        ]
+      },
+      
+      {
+        "lesson": "04",
+        "links": [
+          {
+            "url": "lesson4/activity1.html",
+            "title": "JavaScript Basics"
+          }
+        ]
+      },
+
+      {
+        "lesson": "05",
+        "links": [
+          {
+            "url": "lesson5/activity1.html",
+            "title": "JavaScript Basics"
+          }
+        ]
+      },
+
+      {
+        "lesson": "06",
+        "links": [
+          {
+            "url": "lesson6/activity1.html",
+            "title": "JavaScript Basics"
+          }
+        ]
+      },
+
+      {
+        "lesson": "07",
+        "links": [
+          {
+            "url": "lesson7/activity1.html",
+            "title": "JavaScript Basics"
+          }
+        ]
+      },
+
+      {
+        "lesson": "08",
+        "links": [
+          {
+            "url": "lesson8/activity1.html",
+            "title": "JavaScript Basics"
+          }
+        ]
+      },
+
+      {
+        "lesson": "09",
+        "links": [
+          {
+            "url": "lesson9/activity1.html",
+            "title": "JavaScript Basics"
+          }
+        ]
+      },
+
+      {
+        "lesson": "10",
+        "links": [
+          {
+            "url": "lesson10/activity1.html",
+            "title": "JavaScript Basics"
+          }
+        ]
+      }
+      
+    ]
+  }

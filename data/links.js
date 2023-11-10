@@ -8,7 +8,7 @@ async function getLinks() {
 }
 
 function displayLinks(weeks) {
-  const linksContainer = document.getElementById("links-container");
+  const linksContainer = document.getElementById("learning-container");
 
   weeks.forEach((week) => {
     const weekHeader = document.createElement("h2");

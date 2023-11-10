@@ -362,3 +362,35 @@ nav ul {
   grid-template-columns: 1fr 1fr;
   gap: 20px;
 }
+
+/* Example CSS for member cards and list items */
+.member-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.member-item {
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 4px;
+  width: 300px;
+}
+
+.member-item img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+/* Additional CSS for grid view */
+.member-container.grid-view {
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  overflow-x: auto;
+}
+
+.member-item.grid-view {
+  flex: 0 0 auto;
+  margin-right: 20px;
+}

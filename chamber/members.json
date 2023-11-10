@@ -1,0 +1,94 @@
+{
+    "members": [
+      {
+        "name": "speMEDIA",
+        "address": "53/1 Gemsbok Road, Waterfalls, Harare, 00263",
+        "phone": "+263 71 495 7728",
+        "website": "https://www.spemedia.co.zw/",
+        "image": "manu.jpg",
+        "membershipLevel": "Gold",
+        "otherInfo": "speMEDIA operates on lean sales support staff."
+      },
+      {
+        "name": "Akoiweb Website",
+        "address": "21 Cranleigh Rd, Harare",
+        "phone": "+263773058000",
+        "website": "https://www.akoiweb.co.zw/",
+        "image": "manu1.jpeg",
+        "membershipLevel": "Silver",
+        "otherInfo": "Interactive Web Design Company in Zimbabwe."
+      },
+      {
+        "name": "Harare Web Designers",
+        "address": "53 Fife Ave, Harare",
+        "phone": "+263773625635",
+        "website": "https://www.cee.co.zw/",
+        "image": "manu2.png",
+        "membershipLevel": "Bronze",
+        "otherInfo": "We tune your website design for high visibility in organic (non-paid) search engine results."
+      },
+      {
+        "name": "WebDev Website",
+        "address": "Suite 13, Princess Park Mansions, S. Parirenyatwa St cnr L. Takawira Ave,Bulawayo",
+        "phone": "+263 292 66263",
+        "website": "https://www.webdev.co.zw/",
+        "image": "manu3.png",
+        "membershipLevel": "Silver",
+        "otherInfo": "Knowledge base"
+      },
+      {
+        "name": "Netcom Zimbabwe Website",
+        "address": "987 Cedar St, City",
+        "phone": "+263 777 967624",
+        "website": "https://www.netcomzw.com/",
+        "image": "manu4.jpeg",
+        "membershipLevel": "Gold",
+        "otherInfo": "ICT Solutions"
+      },
+      {
+        "name": "Web Studio Websit",
+        "address": "Office 608 6th Floor, Batanai Gardens, Cnr 1st Street/Jason MoyoHarare",
+        "phone": "+263644308834",
+        "website": "https://webstudio.co.zw/",
+        "image": "manu5.png",
+        "membershipLevel": "Bronze",
+        "otherInfo": "Subscribe to our Newsletter and receive great tips on how to grow your business online"
+      },
+      {
+        "name": "zimHosts",
+        "address": "17 Faversham Close, Kirby Frith, Leicester, LE3 6UP, UK",
+        "phone": "0771 111 222",
+        "website": "http://zimhosts.com/",
+        "image": "manu6.jpeg",
+        "membershipLevel": "Silver",
+        "otherInfo": "We provide premium web hosting"
+      },
+      {
+        "name": "Zimbabwe Website Design Website",
+        "address": "29 Campbell Road Pomona Borrowdale, Harare, Zimbabwe",
+        "phone": "08677 007480",
+        "website": "https://www.zimbabweyp.com/",
+        "image": "manu7.jpeg",
+        "membershipLevel": "Gold",
+        "otherInfo": "Python From Zero To Hero. Learn and practice coding online"
+      },
+      {
+        "name": "C2 Digital Website",
+        "address": "2 Lee Road, Kamfinsa, Harare, Harare, Zimbabwe",
+        "phone": "(04) 480017",
+        "website": "https://www.zimbabweyp.com/",
+        "image": "manu8.png",
+        "membershipLevel": "Bronze",
+        "otherInfo": "Volta4u rental solutions will have you on the road in no time"
+      },
+      {
+        "name": "CEE Creative Zimbabwe",
+        "address": "53 Fife Ave, Harare",
+        "phone": "0773625635",
+        "website": "https://www.cee.co.zw",
+        "image": "manu9.jpeg",
+        "membershipLevel": "Silver",
+        "otherInfo": "Website Development"
+      }
+    ]
+  }

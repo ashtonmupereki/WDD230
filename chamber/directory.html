@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Standard head and meta content -->
+  <title>Midlands Chamber of Commerce</title>
+  <meta name="description" content="Welcome to the Midlands Chamber of Commerce website.">
+
+  <!-- Author meta tag -->
+  <meta name="author" content="Ashton Mupereki">
+  <link rel="stylesheet" type="text/css" href="base.css">
+
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.jpg">
+
+  <!-- Social media meta settings -->
+  <meta property="og:title" content="Midlands Chamber of Commerce">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="http://example.com/image.jpg">
+  <meta property="og:url" content="http://example.com/">
+  <meta property="og:description" content="Welcome to the Midlands Chamber of Commerce website.">
+
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+  <a button id="menu" href="#"></a>
+</head>
+<body>
+  <h3 id="DarkModetext">Dark Mode is OFF</h3>
+    <button onclick="darkMode()">Darkmode</button>
+    <button onclick="lightMode()">LightMode</button>
+  
+  <header>
+    <!-- Header content goes here -->
+    <img src="icon.png" alt="icon">
+    <nav>
+      <!-- Navigation content goes here -->
+      <ul class="navigation">
+        <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">Services</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
+        <li class="nav-item social-link"><a href="https://www.facebook.com"><img src="facebook.png" alt="Facebook"></a></li>
+        <li class="nav-item social-link"><a href="https://www.twitter.com"><img src="twitter.png" alt="Twitter"></a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <main>
+        <section class="company-section">
+          <h2>Our Member Companies</h2>
+          <ul id="company-list"></ul>
+        </section>
+      </main>
+  </main>
+
+  <footer>
+    <!-- Footer content goes here -->
+    <p>Contact information</p>
+    <p>Developed by Ashton Mupereki</p>
+    <p>WDD 230 Project</p>
+    <p>Last modified: <span id="lastModified"></span></p>
+
+    <script>
+      // Dynamically set last modified date
+      document.getElementById('lastModified').textContent = document.lastModified;
+    </script>
+  </footer>
+
+  <!-- JavaScript scripts -->
+  <script src="script.js"></script>
+  <script src="windchill.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Load member data from members.json
+      fetch('members.json')
+        .then(response => response.json())
+        .then(data => {
+          // Get the main element
+          var main = document.querySelector('main');
+  
+          // Create a container element for the member cards or list
+          var container = document.createElement('div');
+          container.classList.add('member-container');
+  
+          // Create a toggle button to switch between grid and list view
+          var toggleButton = document.createElement('button');
+          toggleButton.textContent = 'Toggle View';
+          toggleButton.addEventListener('click', function() {
+            container.classList.toggle('grid-view');
+          });
+  
+          // Append the toggle button to the main element
+          main.appendChild(toggleButton);
+  
+          // Loop through the member data and create member cards or list items
+          data.members.forEach(function(member) {
+            // Create a member card or list item
+            var memberItem = document.createElement('div');
+            memberItem.classList.add('member-item');
+  
+            // Create an image element for the member
+            var memberImage = document.createElement('img');
+            memberImage.src = member.image;
+            memberImage.alt = member.name;
+  
+            // Create a heading element for the member name
+            var memberName = document.createElement('h3');
+            memberName.textContent = member.name;
+  
+            // Create a paragraph element for the member address
+            var memberAddress = document.createElement('p');
+            memberAddress.textContent = member.address;
+  
+            // Create a paragraph element for the member phone number
+            var memberPhone = document.createElement('p');
+            memberPhone.textContent = 'Phone: ' + member.phone;
+  
+            // Create a paragraph element for the member website
+            var memberWebsite = document.createElement('p');
+            var websiteLink = document.createElement('a');
+            websiteLink.href = member.website;
+            websiteLink.textContent = 'Website';
+            memberWebsite.appendChild(websiteLink);
+  
+            // Append the member details to the member card or list item
+            memberItem.appendChild(memberImage);
+            memberItem.appendChild(memberName);
+            memberItem.appendChild(memberAddress);
+            memberItem.appendChild(memberPhone);
+            memberItem.appendChild(memberWebsite);
+  
+            // Append the member card or list item to the container
+            container.appendChild(memberItem);
+          });
+  
+          // Append the container to the main element
+          main.appendChild(container);
+        });
+    });
+  </script>
+</body>
+</html>

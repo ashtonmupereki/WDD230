@@ -19,7 +19,7 @@ function displayLinks(weeks) {
     weekContainer.classList.add("week-container");
 
     const weekHeading = document.createElement("h4");
-    weekHeading.textContent = "Week " + week.lesson;
+    weekHeading.textContent = "Week : " + week.lesson;
 
     const linksList = document.createElement("ul");
     linksList.classList.add("links-list");

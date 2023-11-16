@@ -41,3 +41,4 @@ function displayLinks(weeks) {
 }
 
 getLinks();
+

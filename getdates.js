@@ -25,4 +25,25 @@ if (numVisits !== 0) {
 numVisits++;
 localStorage.setItem("numVisits-ls", numVisits);
 
+const apiKey = '20fe2e5ccd70febfced2ffc798e5a3bf';
+const city = 'London';
+const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`;
 
+fetch(url)
+  .then(response => response.json())
+  .then(data => {
+    // Extract the necessary weather information from the response
+    const temperature = data.main.temp;
+    const description = data.weather[0].description;
+    const iconCode = data.weather[0].icon;
+
+    // Update the HTML elements with the weather information
+    const weatherIcon = document.createElement('img');
+    weatherIcon.src = `https://openweathermap.org/img/wn/${iconCode}.png`;
+    weatherIcon.alt = 'Weather Icon';
+    document.querySelector('.weather').textContent = `${temperature}°C - ${description}`;
+    document.querySelector('.weather').appendChild(weatherIcon);
+  })
+  .catch(error => {
+    console.log('Error:', error);
+  });

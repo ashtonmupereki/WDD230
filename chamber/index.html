@@ -24,17 +24,7 @@
 
   <!-- CSS Stylesheet -->
   <link rel="stylesheet" href="styles.css">
-  <style>
-    .banner {
-      display: none;
-      background: #f9f9f9;
-      padding: 10px;
-      text-align: center;
-    }
-    .banner.close {
-      display: none;
-    }
-  </style>
+  <a button id="menu" href="#"></a>
 </head>
 <body>
   <h3 id="DarkModetext">Dark Mode is OFF</h3>
@@ -54,8 +44,8 @@
         <li class="nav-item social-link"><a href="https://www.twitter.com"><img src="twitter.png" alt="Twitter"></a></li>
       </ul>
     </nav>
-  </header>
 
+  </header>
   <main>
     <section class="hero">
       <!-- Hero image and content goes here -->
@@ -87,48 +77,58 @@
       <p>Location: Midlands City Hall</p>
       <p>Join us for a discussion on fostering entrepreneurship in the Midlands region. This policy roundtable brings together government representatives, business leaders, and industry experts to shape policies that support startup ecosystems, access to funding, and business incubation programs. Be part of the conversation and contribute to the region's entrepreneurial growth.</p>
     </div>
-  </section>
-  <section class="spotlights">
-    <!-- Company spotlights content goes here -->
-    <h2>Company Spotlights</h2>
-    <div class="company-spotlights">
-      <div class="company-spotlight">
-        <h4>Startup Experts</h4>
-        <p>Looking to start a business in the Midlands? Our team of experts can provide guidance on local regulations, permits, and resources for startups. We offer personalized consultations to help you navigate the process and set your business up for success.</p>
-        <a href="#" class="learn-more">Learn More</a>
-      </div>
-      <div class="company-spotlight">
-        <h4>Become a Member</h4>
-        <p>Joining the Midlands Chamber of Commerce offers a range of benefits for local business owners. As a member, you gain access to exclusive networking events, business matchmaking opportunities, educational resources, and advocacy support. Discover the advantages of being part of our dynamic business community.</p>
-        <a href="#" class="learn-more">Learn More</a>
-      </div>
-      <div class="company-spotlight">
-        <h4>Collaborate for Growth</h4>
-        <p>Are you a government representative interested in collaborating with the business community? The Midlands Chamber of Commerce provides a platform for policymakers and business leaders to shape fair and sustainable policies, promote economic growth, and foster a thriving business ecosystem. Join us in driving positive change.</p>
-        <a href="#" class="learn-more">Learn More</a>
-      </div>
-      </div>
     </section>
-    <section class="weather">
-      <!-- Weather information goes here -->
-      <h1>Weather</h1>
-      <div id="current-weather"></div>
-      <div id="forecast"></div>
-    </section>
+    <section class="spotlights">
+      <!-- Company spotlights content goes here -->
+      <h2>Company Spotlights</h2>
+      <div class="company-spotlights">
+        <div class="company-spotlight">
+          <h4>Startup Experts</h4>
+          <p>Looking to start a business in the Midlands? Our team of experts can provide guidance on local regulations, permits, and resources for startups. We offer personalized consultations to help you navigate the process and set your business up for success.</p>
+          <a href="#" class="learn-more">Learn More</a>
+        </div>
+        <div class="company-spotlight">
+          <h4>Become a Member</h4>
+          <p>Joining the Midlands Chamber of Commerce offers a range of benefits for local business owners. As a member, you gain access to exclusive networking events, business matchmaking opportunities, educational resources, and advocacy support. Discover the advantages of being part of our dynamic business community.</p>
+          <a href="#" class="learn-more">Learn More</a>
+        </div>
+        <div class="company-spotlight">
+          <h4>Collaborate for Growth</h4>
+          <p>Are you a government representative interested in collaborating with the business community? The Midlands Chamber of Commerce provides a platform for policymakers and business leaders to shape fair and sustainable policies, promote economic growth, and foster a thriving business ecosystem. Join us in driving positive change.</p>
+          <a href="#" class="learn-more">Learn More</a>
+        </div>
+        </div>
+        <section id="weatherSection">
+          <h2>Current Weather</h2>
+          <div id="currentTemperature"></div>
+          <div id="currentWeatherDescription"></div>
+        </section>
+    
+        <section id="forecastSection">
+          <h2>3-Day Forecast</h2>
+          <ul id="forecastList"></ul>
+        </section>
   </main>
 
   <footer>
+    
+    <div id="banner" class="hidden">
+      <p>Join us for the Chamber of Commerce meet and greet on Wednesday at 7:00 p.m.</p>
+      <button id="closeBanner">Close</button>
+    </div>
     <!-- Footer content goes here -->
-    <p>&copy; 2023 Midlands Chamber of Commerce. All rights reserved.</p>
-    <p>Last modified: <span id="last-modified"></span></p>
+    <p>Contact information</p>
+    <p>Developed by Ashton Mupereki</p>
+    <p>WDD 230 Project</p>
+    <p>Last modified: <span id="lastModified"></span></p>
+
+    <script>
+      // Dynamically set last modified date
+      document.getElementById('lastModified').textContent = document.lastModified;
+    </script>
   </footer>
 
-  <div class="banner" id="banner">
-    <p>Join us for the Chamber of Commerce meet and greet on Wednesday at 7:00 p.m.</p>
-    <button onclick="closeBanner()">Close</button>
-  </div>
-
-  <!-- JavaScript code -->
+  <!-- JavaScript scripts -->
   <script src="script.js"></script>
   <script src="windchill.js"></script>
 </body>

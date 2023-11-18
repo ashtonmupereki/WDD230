@@ -49,80 +49,101 @@ todayElement.textContent = new Date(today).toLocaleString();
 // Store the current visit date in localStorage
 localStorage.setItem("lastVisit", today.toString());
 
-function getCurrentWeather() {
-  fetch('https://api.openweathermap.org/data/2.5/onecall?lat=-19.416663&lon=29.833330&exclude=minutely,hourly&appid=20fe2e5ccd70febfced2ffc798e5a3bf')
+// Function to fetch weather data from OpenWeatherMap API
+function fetchWeatherData() {
+  // Replace 'YOUR_API_KEY' with your actual OpenWeatherMap API key
+  const apiKey = 'a46fbe9048f9add8c93a01bd93c8d12c';
+  const apiUrl = 'https://api.openweathermap.org/data/2.5/weather?q=chamber&appid=' + apiKey;
+
+  fetch(apiUrl)
     .then(response => response.json())
     .then(data => {
-      const currentTemperature = data.current.temp;
-      const currentWeatherDescription = data.current.weather[0].description;
-      const forecastData = data.daily.slice(0, 3);
+      // Extract and display current temperature
+      const temperature = Math.round(data.main.temp - 273.15); // Convert from Kelvin to Celsius
+      document.getElementById('currentTemperature').textContent = 'Temperature: ' + temperature + '°C';
 
-      // Display current temperature and weather description
-      document.getElementById('current-weather').innerHTML = `
-        <p>Temperature: ${currentTemperature}°C</p>
-        <p>Description: ${currentWeatherDescription}</p>
-      `;
-
-      // Display 3-day temperature forecast
-      document.getElementById('forecast').innerHTML = `
-        <h3>3-Day Forecast</h3>
-        <ul>
-          ${forecastData.map(day => `<li>${day.temp.day}°C</li>`).join('')}
-        </ul>
-      `;
+      // Extract and display current weather description
+      const weatherDescription = data.weather[0].description;
+      document.getElementById('currentWeatherDescription').textContent = 'Weather: ' + weatherDescription;
     })
     .catch(error => {
       console.log('Error fetching weather data:', error);
     });
 }
 
-// Function to close the banner
-function closeBanner() {
-  document.getElementById('banner').classList.add('close');
+// Function to fetch weather data from OpenWeatherMap API
+function fetchWeatherData() {
+  const apiKey = '20fe2e5ccd70febfced2ffc798e5a3bf';
+  const apiUrl = 'https://api.openweathermap.org/data/2.5/weather?q=chamber&appid=' + apiKey;
+
+  fetch(apiUrl)
+    .then(response => response.json())
+    .then(data => {
+      // Extract and display current temperature
+      const temperature = Math.round(data.main.temp - 273.15); // Convert from Kelvin to Celsius
+      document.getElementById('currentTemperature').textContent = 'Temperature: ' + temperature + '°C';
+
+      // Extract and display current weather description
+      const weatherDescription = data.weather[0].description;
+      document.getElementById('currentWeatherDescription').textContent = 'Weather: ' + weatherDescription;
+    })
+    .catch(error => {
+      console.log('Error fetching weather data:', error);
+    });
 }
 
-// Function to check if it's Monday, Tuesday, or Wednesday
-function isBannerVisible() {
-  const today = new Date();
-  const dayOfWeek = today.getDay();
+// Function to fetch forecast data from OpenWeatherMap API
+function fetchForecastData() {
+  const apiKey = '20fe2e5ccd70febfced2ffc798e5a3bf';
+  const apiUrl = 'https://api.openweathermap.org/data/2.5/forecast?q=chamber&appid=' + apiKey;
 
-  if (dayOfWeek >= 1 && dayOfWeek <= 3) {
-    document.getElementById('banner').style.display = 'block';
+  fetch(apiUrl)
+    .then(response => response.json())
+    .then(data => {
+      // Extract and display 3-day forecast
+      const forecastList = document.getElementById('forecastList');
+      forecastList.innerHTML = ''; // Clear previous forecast data
+
+      for (let i = 0; i < 3; i++) {
+        const forecastData = data.list[i * 8]; // Retrieve data for every 24 hours (8 data points per day)
+        const temperature = Math.round(forecastData.main.temp - 273.15); // Convert from Kelvin to Celsius
+        const weatherDescription = forecastData.weather[0].description;
+
+        const listItem = document.createElement('li');
+        listItem.textContent = `Temperature: ${temperature}°C, Weather: ${weatherDescription}`;
+        forecastList.appendChild(listItem);
+      }
+    })
+    .catch(error => {
+      console.log('Error fetching forecast data:', error);
+    });
+}
+
+// Function to show or hide the banner based on the current day
+function toggleBanner() {
+  const banner = document.getElementById('banner');
+  const currentDate = new Date();
+  const currentDay = currentDate.getDay();
+
+  if (currentDay >= 1 && currentDay <= 3) {
+    banner.classList.remove('hidden');
+  } else {
+    banner.classList.add('hidden');
   }
 }
 
-// Call the functions when the page loads
-window.onload = function () {
-  getCurrentWeather();
-  isBannerVisible();
-};
-
-function initMap() {
-  const myLatlng = { lat: -25.363, lng: 131.044 };
-  const map = new google.maps.Map(document.getElementById("map"), {
-    zoom: 4,
-    center: myLatlng,
-  });
-  // Create the initial InfoWindow.
-  let infoWindow = new google.maps.InfoWindow({
-    content: "Click the map to get Lat/Lng!",
-    position: myLatlng,
-  });
-
-  infoWindow.open(map);
-  // Configure the click listener.
-  map.addListener("click", (mapsMouseEvent) => {
-    // Close the current InfoWindow.
-    infoWindow.close();
-    // Create a new InfoWindow.
-    infoWindow = new google.maps.InfoWindow({
-      position: mapsMouseEvent.latLng,
-    });
-    infoWindow.setContent(
-      JSON.stringify(mapsMouseEvent.latLng.toJSON(), null, 2),
-    );
-    infoWindow.open(map);
-  });
+// Function to close the banner
+function closeBanner() {
+  const banner = document.getElementById('banner');
+  banner.classList.add('hidden');
 }
 
-window.initMap = initMap;
+// Event listener for close banner button
+document.getElementById('closeBanner').addEventListener('click', closeBanner);
+
+// Fetch weather data and forecast data on page load
+fetchWeatherData();
+fetchForecastData();
+
+// Update banner visibility on page load
+toggleBanner();

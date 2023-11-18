@@ -1,0 +1,17 @@
+.hidden {
+    display: none;
+  }
+  
+  #banner {
+    background-color: #f0f0f0;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  #closeBanner {
+    margin-top: 10px;
+  }
+  
+  #weatherSection, #forecastSection {
+    margin-bottom: 20px;
+  }

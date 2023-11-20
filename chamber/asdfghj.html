@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <meta name="description" content="Round Rock TX Chamber Project Site - WDD 230 - Web Frontend Development Course">
+    <meta name="author" content="Thiago Pizzirani">
+    <meta property="og:title" content="Round Rock Texas Chamber of Commerce - WWD230 Site Project" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://thiagopizzirani.github.io/wdd230/chamber/" />
+    <meta property="og:image" content="https://images.app.goo.gl/oCaQAAaMv1oftyTB7" />
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/medium.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <title>Welcome to the Round Rock Texas Chamber of Commerce - Join us today! WDD230 Web Project</title>
+</head>
+<body>
+    <div id="mode">
+            ☑️dark
+        </div>
+    <header>
+        <div id="logo"><img src="images/logo-chamber.webp" alt="logo of the round rock chamber"></div>
+        <div id="social"><img src="images/facebook-icon.WEBP" alt="social icon of facebook"><img src="images/linkedin-icon.WEBP" alt="social icon of linkedin"></div>
+        <nav>
+            <button id="menu"></button>
+            <ul class="navigation">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="discover.html">Discover</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="join.html">Join</a></li>
+            </ul>
+            
+        </nav>
+        
+    </header>
+    
+    <main>
+        <!-- week 6 Hero change -->
+        <div id="week-banner"></div>
+        <div class="hero">
+            <picture>
+                <source srcset="images/wdd230-week6-small.webp" media="(max-width: 500px)">
+                <source srcset="images/wdd230-week6-medium.webp" media="(max-width: 680px)">
+                <img src="images/wdd230-week6-large.webp" alt="hero people week 6" width="700" height="466">
+            </picture>
+           <!-- <div class="herolabel-large">
+                <p>Large hero</p>
+            </div>
+            <div class="herolabel-small">
+                <p>Small hero</p>
+            </div>
+            <div class="herolabel-medium">
+                <p>Medium hero</p>
+            </div>-->
+        </div>
+
+        <!-- Original hero 
+            <div id="hero-img">
+            <img src="images/hero-img-chamber.png" alt="hero image of the round rock chamber"></div>
+            <div id="hero-msg">Step up to</div>-->
+            <button id="join"><a href="join.html">Join Us</a></button> 
+        
+        
+        <section id="content">
+            <div id="events">
+                <h3>Events</h3>
+                <p>Tuesday, November 21, 2023 8:00 - 10:00 AM CST</p>
+                <p>Centre Event Space</p>
+                <p>305 W Liberty Avenue 2nd Floor - Hutto, TX 78664</p>
+                <br><hr>
+                <p><br>Saturday, December 9, 2023 1:00 - 3:00 PM CST</p>
+                <p>Round Rock Chamber Room 5</p>
+                <p>2800 I-35 N - Round Rock, TX 78664</p>
+
+            </div>
+            <div id="weather">
+                <h3>Weather</h3>
+                <p>Temperature in Round Rock, TX: <span id="current-temp"></span></p>
+                <figure>
+                    <img id="weather-icon" src="#" alt="#">
+                    <figcaption id="description"></figcaption>
+                </figure>
+                <div id="moreinfo"></div> 
+               
+                <div id="inputs">
+                    <br>Air temperature (°F): <input type="text" id="input-air-temp">
+                    <br>Wind speed (mph):<input type="text" id="input-wind-speed"> 
+                <button id ="wind-chill" type="submit">Wind Chill Index</button>
+                </div>
+                <div id="windchill-result"></div>
+            </div>
+        </section>
+        <section id="members">
+            <div class="member-card">
+                <h3>Two Man Swift Cleaning</h3>
+                <p>Griffin and Paul<br>
+                Phone: 512-596-1234
+                Investor Since: 2018</p>
+            </div>
+            <div class="member-card2">
+                <h3>Granite Media Partners</h3>
+                <p>Rob and Rick<br>
+                Phone: 512-596-4321
+                Investor Since: 2003</p>
+            </div>
+            <div class="member-card3">
+                <h3>Community Services Inc.</h3>
+                <p>Cindy and Todd<br>
+                Work Phone: 512-596-0000
+                Investor Since: 2022</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div id="contact">
+            <img src="images/logo-chamber.webp" alt="small logo chamber footer">
+        </div>
+        <p id="year"></p>
+        <div>Thiago Pizzirani</div>
+        <div>This is a student project for BYUI WDD 230 only - NOT a Commercial Site</div>
+        <p id="last-mod"></p>
+    </footer>
+    <script src="scripts/chamber.js"></script>
+    <script src="scripts/windchill.js"></script>
+</body>
+</html>

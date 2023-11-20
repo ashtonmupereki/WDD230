@@ -50,3 +50,5 @@ closeButton.addEventListener("click", function() {
   // Hide the banner when the close button is clicked
   banner.style.display = "none";
 });
+
+f3c61e6adcb4f31195c10ee3e27d62ab

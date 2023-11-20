@@ -50,23 +50,22 @@ todayElement.textContent = new Date(today).toLocaleString();
 localStorage.setItem("lastVisit", today.toString());
 
   // OpenWeatherMap API endpoint and API key
-  var apiUrl = "https://api.openweathermap.org/data/2.5/onecall";
-  var apiKey = "f3c61e6adcb4f31195c10ee3e27d62ab";
-
-  // Chamber location coordinates
-  var latitude = 59.99; // Replace with actual latitude
-  var longitude = 59.99; // Replace with actual longitude
+  
+  const apiKey = "f3c61e6adcb4f31195c10ee3e27d62ab";
+  const city = "Gweru";
+  const latitude = 59.99;
+  const longitude = 59.99;
+  const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&lat=${latitude}&lon=${longitude}`;
 
   // Make API request to retrieve weather data
-  fetch(`${apiUrl}?lat=${latitude}&lon=${longitude}&appid=${apiKey}`)
+  fetch(url)
     .then(response => response.json())
     .then(data => {
       // Display current temperature and weather description
-      var currentTemperature = data.current.temp;
-      var currentWeatherDescription = data.current.weather[0].description;
+      const currentTemperature = data.current.temp;
+      const currentWeatherDescription = data.current.weather[0].description;
 
-      document.getElementById("currentTemperature").textContent = "Temperature: " + currentTemperature + "°C";
-      document.getElementById("currentWeatherDescription").textContent = "Description: " + currentWeatherDescription;
+      document.querySelector('.weather').textContent = `${currentTemperatureTemperature}°C - ${currentWeatherDescription}`;
 
       // Display 3-day temperature forecast
       var forecastContainer = document.getElementById("forecastContainer");
@@ -91,12 +90,12 @@ localStorage.setItem("lastVisit", today.toString());
   // Check if the current day is Monday, Tuesday, or Wednesday
   if (currentDay >= 1 && currentDay <= 3) {
     // Display the banner
-    var banner = document.getElementById("banner");
+    const banner = document.getElementById("banner");
     banner.style.display = "block";
   }
 
   // Add event listener to the close button
-  var closeButton = document.getElementById("closeButton");
+  const closeButton = document.getElementById("closeButton");
   closeButton.addEventListener("click", function() {
     // Hide the banner when the close button is clicked
     banner.style.display = "none";

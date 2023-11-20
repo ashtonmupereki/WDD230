@@ -49,101 +49,55 @@ todayElement.textContent = new Date(today).toLocaleString();
 // Store the current visit date in localStorage
 localStorage.setItem("lastVisit", today.toString());
 
-// Function to fetch weather data from OpenWeatherMap API
-function fetchWeatherData() {
-  // Replace 'YOUR_API_KEY' with your actual OpenWeatherMap API key
-  const apiKey = 'a46fbe9048f9add8c93a01bd93c8d12c';
-  const apiUrl = 'https://api.openweathermap.org/data/2.5/weather?q=chamber&appid=' + apiKey;
+  // OpenWeatherMap API endpoint and API key
+  var apiUrl = "https://api.openweathermap.org/data/2.5/onecall";
+  var apiKey = "f3c61e6adcb4f31195c10ee3e27d62ab";
 
-  fetch(apiUrl)
+  // Chamber location coordinates
+  var latitude = 59.99; // Replace with actual latitude
+  var longitude = 59.99; // Replace with actual longitude
+
+  // Make API request to retrieve weather data
+  fetch(`${apiUrl}?lat=${latitude}&lon=${longitude}&appid=${apiKey}`)
     .then(response => response.json())
     .then(data => {
-      // Extract and display current temperature
-      const temperature = Math.round(data.main.temp - 273.15); // Convert from Kelvin to Celsius
-      document.getElementById('currentTemperature').textContent = 'Temperature: ' + temperature + '°C';
+      // Display current temperature and weather description
+      var currentTemperature = data.current.temp;
+      var currentWeatherDescription = data.current.weather[0].description;
 
-      // Extract and display current weather description
-      const weatherDescription = data.weather[0].description;
-      document.getElementById('currentWeatherDescription').textContent = 'Weather: ' + weatherDescription;
+      document.getElementById("currentTemperature").textContent = "Temperature: " + currentTemperature + "°C";
+      document.getElementById("currentWeatherDescription").textContent = "Description: " + currentWeatherDescription;
+
+      // Display 3-day temperature forecast
+      var forecastContainer = document.getElementById("forecastContainer");
+      var forecastData = data.daily.slice(1, 4); // Get next 3 days' forecast data
+
+      forecastData.forEach(day => {
+        var date = new Date(day.dt * 1000).toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric' });
+        var temperature = day.temp.day;
+        var forecastItem = document.createElement("div");
+        forecastItem.innerHTML = "<p><strong>" + date + "</strong></p><p>Temperature: " + temperature + "°C</p>";
+        forecastContainer.appendChild(forecastItem);
+      });
     })
     .catch(error => {
-      console.log('Error fetching weather data:', error);
+      console.log("Error:", error);
     });
-}
+  
+  // Get the current day of the week
+  var currentDate = new Date();
+  var currentDay = currentDate.getDay();
 
-// Function to fetch weather data from OpenWeatherMap API
-function fetchWeatherData() {
-  const apiKey = '20fe2e5ccd70febfced2ffc798e5a3bf';
-  const apiUrl = 'https://api.openweathermap.org/data/2.5/weather?q=chamber&appid=' + apiKey;
-
-  fetch(apiUrl)
-    .then(response => response.json())
-    .then(data => {
-      // Extract and display current temperature
-      const temperature = Math.round(data.main.temp - 273.15); // Convert from Kelvin to Celsius
-      document.getElementById('currentTemperature').textContent = 'Temperature: ' + temperature + '°C';
-
-      // Extract and display current weather description
-      const weatherDescription = data.weather[0].description;
-      document.getElementById('currentWeatherDescription').textContent = 'Weather: ' + weatherDescription;
-    })
-    .catch(error => {
-      console.log('Error fetching weather data:', error);
-    });
-}
-
-// Function to fetch forecast data from OpenWeatherMap API
-function fetchForecastData() {
-  const apiKey = '20fe2e5ccd70febfced2ffc798e5a3bf';
-  const apiUrl = 'https://api.openweathermap.org/data/2.5/forecast?q=chamber&appid=' + apiKey;
-
-  fetch(apiUrl)
-    .then(response => response.json())
-    .then(data => {
-      // Extract and display 3-day forecast
-      const forecastList = document.getElementById('forecastList');
-      forecastList.innerHTML = ''; // Clear previous forecast data
-
-      for (let i = 0; i < 3; i++) {
-        const forecastData = data.list[i * 8]; // Retrieve data for every 24 hours (8 data points per day)
-        const temperature = Math.round(forecastData.main.temp - 273.15); // Convert from Kelvin to Celsius
-        const weatherDescription = forecastData.weather[0].description;
-
-        const listItem = document.createElement('li');
-        listItem.textContent = `Temperature: ${temperature}°C, Weather: ${weatherDescription}`;
-        forecastList.appendChild(listItem);
-      }
-    })
-    .catch(error => {
-      console.log('Error fetching forecast data:', error);
-    });
-}
-
-// Function to show or hide the banner based on the current day
-function toggleBanner() {
-  const banner = document.getElementById('banner');
-  const currentDate = new Date();
-  const currentDay = currentDate.getDay();
-
+  // Check if the current day is Monday, Tuesday, or Wednesday
   if (currentDay >= 1 && currentDay <= 3) {
-    banner.classList.remove('hidden');
-  } else {
-    banner.classList.add('hidden');
+    // Display the banner
+    var banner = document.getElementById("banner");
+    banner.style.display = "block";
   }
-}
 
-// Function to close the banner
-function closeBanner() {
-  const banner = document.getElementById('banner');
-  banner.classList.add('hidden');
-}
-
-// Event listener for close banner button
-document.getElementById('closeBanner').addEventListener('click', closeBanner);
-
-// Fetch weather data and forecast data on page load
-fetchWeatherData();
-fetchForecastData();
-
-// Update banner visibility on page load
-toggleBanner();
+  // Add event listener to the close button
+  var closeButton = document.getElementById("closeButton");
+  closeButton.addEventListener("click", function() {
+    // Hide the banner when the close button is clicked
+    banner.style.display = "none";
+  });

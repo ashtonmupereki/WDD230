@@ -1,0 +1,88 @@
+/* Base styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: lightblue;
+    color: darkred;
+  }
+  
+  h2 {
+    font-style: italic;
+  }
+  
+  h3 {
+    font-style: oblique;
+  }
+  
+  a {
+    color: green;
+  }
+  
+  /* Header styles */
+  header {
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  /* Footer styles */
+  footer {
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  /* Navigation styles */
+  .navigation {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .nav-item {
+    margin-left: 10px;
+  }
+  
+  /* Member styles */
+  .member-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 20px;
+    margin-top: 20px;
+  }
+  
+  .member-item {
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .member-item img {
+    max-width: 100%;
+    height: auto;
+    justify-content: left;
+  }
+
+  header img{
+    justify-content: left;
+  }
+  
+  /* Dark mode styles */
+  #DarkModetext {
+    color: darkred;
+  }
+  
+  /* Toggle view button styles */
+  button {
+    background-color: pink;
+    color: green;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: hotpink;
+  }

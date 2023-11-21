@@ -1,49 +1,47 @@
-/* prophets.css */
-
-/* Global styles */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-  }
-  
-  header {
-    background-color: #f2f2f2;
-    padding: 20px;
-    text-align: center;
-  }
-  
-  h1 {
-    margin: 0;
-  }
-  
-  main {
-    padding: 20px;
-  }
-  
-  footer {
-    background-color: #f2f2f2;
+/* CSS for prophet cards */
+.card {
+    display: inline-block;
+    width: 300px;
+    margin: 10px;
     padding: 10px;
     text-align: center;
-  }
-  
-  /* Card styles */
-  section {
-    background-color: #fff;
     border: 1px solid #ccc;
-    border-radius: 4px;
-    padding: 20px;
-    margin-bottom: 20px;
+    border-radius: 5px;
   }
   
-  h2 {
-    font-size: 20px;
+  .card img {
+    width: 150px;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 10px;
+  }
+  
+  .card h2 {
     margin-top: 0;
   }
   
-  img {
-    display: block;
-    margin: 10px auto;
-    border: 1px solid #ccc;
-    border-radius: 50%;
+  .card p {
+    margin-bottom: 5px;
+  }
+  
+  /* Responsive layout for desktop */
+  @media screen and (min-width: 768px) {
+    #cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  
+    .card {
+      width: 250px;
+    }
+  }
+  
+  /* Responsive layout for mobile */
+  @media screen and (max-width: 767px) {
+    #cards {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
   }

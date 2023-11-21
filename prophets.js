@@ -20,7 +20,7 @@ var prophetsData = {
         "order": 2,
         "birthplace": "Whitingham, Vermont",
         "numofchildren": 57,
-        "imageurl": "https://content.churchofjesuschrist.org/acp/bc/cp/Asia%20Area/Area/Gospel%20Topics/Priesthood/1200x1920/brigham-young-prophet-of-god.jpg"
+        "imageurl": "https://ashtonmupereki.github.io/wdd230/prophets.js"
       },
       {
         "name": "John",

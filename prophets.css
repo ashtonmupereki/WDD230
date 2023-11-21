@@ -1,0 +1,49 @@
+/* prophets.css */
+
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    background-color: #f2f2f2;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  h1 {
+    margin: 0;
+  }
+  
+  main {
+    padding: 20px;
+  }
+  
+  footer {
+    background-color: #f2f2f2;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  /* Card styles */
+  section {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  
+  h2 {
+    font-size: 20px;
+    margin-top: 0;
+  }
+  
+  img {
+    display: block;
+    margin: 10px auto;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+  }

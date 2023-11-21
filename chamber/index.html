@@ -13,7 +13,7 @@
   <link rel="stylesheet" type="text/css" href="styles/base.css">
 
   <!-- Favicon -->
-  <link rel="icon" href="favicon.jpg">
+  <link rel="icon" href="chamber/favicon.jpg">
 
   <!-- Social media meta settings -->
   <meta property="og:title" content="Midlands Chamber of Commerce">
@@ -38,8 +38,8 @@
       <!-- Navigation content goes here -->
       <ul class="navigation">
         <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
-        <li class="nav-item"><a href="#" class="nav-link">Services</a></li>
-        <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
+        <li><a href="discover.html" class="nav-link" target="_blank">Discover</a></li>
+        <li><a href="directory.html" class="nav-link" target="_blank">Directory</a></li>
         <li class="nav-item social-link"><a href="https://www.facebook.com"><img src="facebook.png" alt="Facebook"></a></li>
         <li class="nav-item social-link"><a href="https://www.twitter.com"><img src="twitter.png" alt="Twitter"></a></li>
       </ul>
@@ -106,13 +106,23 @@
   </main>
 
   <footer>
+    <p><span class="label">Weather: </span><span class="weather"></span></p>
+    <p>
+      <label for="temperatureInput">Temperature: </label>
+      <input type="number" id="temperatureInput" placeholder="Enter temperature">
+    </p>
+    <p>
+      <label for="windSpeedInput">Wind Speed: </label>
+      <input type="number" id="windSpeedInput" placeholder="Enter wind speed">
+    </p>
+    <p>
+      <button id="calculateButton">Calculate Wind Chill</button>
+    </p>
+    <p><span class="label">Wind Chill: </span><span id="windChillValue"></span></p>
     
-    <div id="banner" class="display: none;">
-      <p>Join us for the Chamber of Commerce meet and greet on Wednesday at 7:00 p.m.</p>
-      <button type="closeButton">❌</button>
-    </div>
+    
     <!-- Footer content goes here -->
-    <p>Contact information</p>
+    
     <p>Developed by Ashton Mupereki</p>
     <p>WDD 230 Project</p>
     <p>Last modified: <span id="lastModified"></span></p>

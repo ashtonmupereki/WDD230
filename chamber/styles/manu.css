@@ -73,6 +73,45 @@ body {
     padding: 0;
     margin: 0;
   }
+
+  .image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  figure {
+    width: 50%;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  figcaption {
+    text-align: left;
+    padding-top: 50px;
+  }
+  
+  figcaption h3 {
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(8, 0, 0, 0.5);
+    font-style: italic;
+  }
+
+  @media (min-width: 768px) {
+    figure:nth-child(2n+1) {
+      order: 1;
+      margin-right: 0;
+    }
+  
+    figure:nth-child(2n) {
+      order: 2;
+      margin-left: 0;
+    }
+  }
   
   .navigation li {
     display: inline-block;
@@ -81,7 +120,8 @@ body {
   
   /* Dark mode styles */
   #DarkModetext {
-    color: black;
+    color: rgb(49, 8, 182);
+    
   }
   
   /* Additional custom styles */

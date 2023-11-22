@@ -4,7 +4,8 @@
         "lesson": "01",
         "links": [
           {
-            "url": "lesson1/jspen.html","title": "Introduction to HTML"
+            "url": "lesson1/jspen.html",
+            "title": "Introduction to HTML"
           }
         ]
       },
@@ -13,7 +14,7 @@
         "links": [
           {
             "url": "lesson2/mediaquery.html",
-            "title": "Media Queries"
+            "title": "Design Principles"
           }
         ]
       },
@@ -22,7 +23,7 @@
         "links": [
           {
             "url": "lesson3/activity1.html",
-            "title": "Responsive Web Design"
+            "title": "Hamburger menu"
           }
         ]
       },
@@ -32,7 +33,7 @@
         "links": [
           {
             "url": "lesson4/activity1.html",
-            "title": "JavaScript Basics"
+            "title": "Frontend Job Descriptions"
           }
         ]
       },
@@ -42,7 +43,7 @@
         "links": [
           {
             "url": "lesson5/activity1.html",
-            "title": "JavaScript Basics"
+            "title": "DOM Manipulation"
           }
         ]
       },
@@ -52,7 +53,7 @@
         "links": [
           {
             "url": "lesson6/activity1.html",
-            "title": "JavaScript Basics"
+            "title": "Responsive Design"
           }
         ]
       },
@@ -62,7 +63,7 @@
         "links": [
           {
             "url": "lesson7/activity1.html",
-            "title": "JavaScript Basics"
+            "title": "Page Loading"
           }
         ]
       },
@@ -72,7 +73,7 @@
         "links": [
           {
             "url": "lesson8/activity1.html",
-            "title": "JavaScript Basics"
+            "title": "Forms and Tables"
           }
         ]
       },
@@ -82,7 +83,7 @@
         "links": [
           {
             "url": "lesson9/activity1.html",
-            "title": "JavaScript Basics"
+            "title": "JSON"
           }
         ]
       },
@@ -92,7 +93,7 @@
         "links": [
           {
             "url": "lesson10/activity1.html",
-            "title": "JavaScript Basics"
+            "title": "Weather"
           }
         ]
       }

@@ -49,54 +49,35 @@ todayElement.textContent = new Date(today).toLocaleString();
 // Store the current visit date in localStorage
 localStorage.setItem("lastVisit", today.toString());
 
-  // OpenWeatherMap API endpoint and API key
-  
-  const apiKey = "f3c61e6adcb4f31195c10ee3e27d62ab";
-  const city = "Gweru";
-  const latitude = 59.99;
-  const longitude = 59.99;
-  const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&lat=${latitude}&lon=${longitude}`;
+  // Function to fetch the weather data
+function fetchWeatherData() {
+  // Replace 'YOUR_API_KEY' with your actual API key from OpenWeatherMap
+  var apiKey = 'f3c61e6adcb4f31195c10ee3e27d62ab';
 
-  // Make API request to retrieve weather data
-  fetch(url)
+  // Fetch the current weather data
+  fetch(`https://api.openweathermap.org/data/2.5/weather?q=GWERU&appid=${apiKey}&units=metric`)
     .then(response => response.json())
     .then(data => {
-      // Display current temperature and weather description
-      const currentTemperature = data.current.temp;
-      const currentWeatherDescription = data.current.weather[0].description;
-
-      document.querySelector('.weather').textContent = `${currentTemperatureTemperature}°C - ${currentWeatherDescription}`;
-
-      // Display 3-day temperature forecast
-      var forecastContainer = document.getElementById("forecastContainer");
-      var forecastData = data.daily.slice(1, 4); // Get next 3 days' forecast data
-
-      forecastData.forEach(day => {
-        var date = new Date(day.dt * 1000).toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric' });
-        var temperature = day.temp.day;
-        var forecastItem = document.createElement("div");
-        forecastItem.innerHTML = "<p><strong>" + date + "</strong></p><p>Temperature: " + temperature + "°C</p>";
-        forecastContainer.appendChild(forecastItem);
-      });
+      // Update the current weather element
+      var currentWeatherElement = document.getElementById('current-weather');
+      currentWeatherElement.textContent = `${data.main.temp}°C, ${data.weather[0].description}`;
     })
-    .catch(error => {
-      console.log("Error:", error);
-    });
-  
-  // Get the current day of the week
-  var currentDate = new Date();
-  var currentDay = currentDate.getDay();
+    .catch(error => console.log('Error fetching current weather:', error));
 
-  // Check if the current day is Monday, Tuesday, or Wednesday
-  if (currentDay >= 1 && currentDay <= 3) {
-    // Display the banner
-    const banner = document.getElementById("banner");
-    banner.style.display = "block";
-  }
+  // Fetch the 3-day weather forecast
+  fetch(`https://api.openweathermap.org/data/2.5/forecast?q=YOUR_CITY_NAME&appid=${apiKey}&units=metric`)
+    .then(response => response.json())
+    .then(data => {
+      // Update the 3-day weather forecast elements
+      var forecastElements = document.querySelectorAll('.weather-forecast');
+      for (var i = 0; i < forecastElements.length; i++) {
+        var forecastElement = forecastElements[i];
+        var forecastData = data.list[i * 8]; // Fetching data for every 24 hours (8 data points per day)
+        forecastElement.textContent = `${forecastData.main.temp}°C, ${forecastData.weather[0].description}`;
+      }
+    })
+    .catch(error => console.log('Error fetching weather forecast:', error));
+}
 
-  // Add event listener to the close button
-  const closeButton = document.getElementById("closeButton");
-  closeButton.addEventListener("click", function() {
-    // Hide the banner when the close button is clicked
-    banner.style.display = "none";
-  });
+// Call the fetchWeatherData function when the page loads
+window.addEventListener('load', fetchWeatherData);

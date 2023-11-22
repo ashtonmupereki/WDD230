@@ -4,6 +4,30 @@ body {
     background-color: lightblue;
     color: darkred;
   }
+
+  .dark-mode {
+    background-color: black;
+    color: white;
+  }
+
+  .member-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+  }
+
+  .member-item {
+    border: 1px solid #ccc;
+    padding: 10px;
+  }
+
+  .grid-view {
+    display: grid;
+  }
+
+  .list-view {
+    display: block;
+  }
   
   h2 {
     font-style: italic;

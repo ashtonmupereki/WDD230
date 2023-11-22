@@ -26,7 +26,7 @@ numVisits++;
 localStorage.setItem("numVisits-ls", numVisits);
 
 const apiKey = '20fe2e5ccd70febfced2ffc798e5a3bf';
-const city = 'London';
+const city = 'Gweru';
 const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`;
 
 fetch(url)

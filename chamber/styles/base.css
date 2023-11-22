@@ -17,6 +17,25 @@ a {
   font-family: "Arial Rounded MT Bold", sans-serif;
 }
 
+.join-button {
+  position: absolute;
+  top: 50%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #ffcc00;
+  color: green;
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.join-button:hover {
+  background-color: #ffa500;
+}
 
 ul {
   list-style: none;
@@ -98,6 +117,7 @@ section.spotlights h2 {
 
 .company-spotlight p {
   color:rgb(122, 4, 4);
+  font-style: italic;
 }
 
 .company-spotlight a.learn-more {

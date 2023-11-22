@@ -63,9 +63,28 @@
       document.getElementById('lastModified').textContent = document.lastModified;
     </script>
   </footer>
-
+  <style>
+    .member-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 20px;
+    }
+  
+    .member-item {
+      border: 1px solid #ccc;
+      padding: 10px;
+    }
+  
+    .grid-view {
+      display: grid;
+    }
+  
+    .list-view {
+      display: block;
+    }
+  </style>
   <!-- JavaScript scripts -->
-  <script src="chamber/scripts/script.js"></script>
+  <script src="script.js"></script>
   <script src="chamber/scripts/windchill.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', function() {
@@ -75,62 +94,63 @@
         .then(data => {
           // Get the main element
           var main = document.querySelector('main');
-  
+
           // Create a container element for the member cards or list
           var container = document.createElement('div');
           container.classList.add('member-container');
-  
+
           // Create a toggle button to switch between grid and list view
           var toggleButton = document.createElement('button');
           toggleButton.textContent = 'Toggle View';
           toggleButton.addEventListener('click', function() {
             container.classList.toggle('grid-view');
+            container.classList.toggle('list-view');
           });
-  
+
           // Append the toggle button to the main element
           main.appendChild(toggleButton);
-  
+
           // Loop through the member data and create member cards or list items
           data.members.forEach(function(member) {
             // Create a member card or list item
             var memberItem = document.createElement('div');
             memberItem.classList.add('member-item');
-  
+
             // Create an image element for the member
             var memberImage = document.createElement('img');
             memberImage.src = member.image;
             memberImage.alt = member.name;
-  
+
             // Create a heading element for the member name
             var memberName = document.createElement('h3');
             memberName.textContent = member.name;
-  
+
             // Create a paragraph element for the member address
             var memberAddress = document.createElement('p');
             memberAddress.textContent = member.address;
-  
+
             // Create a paragraph element for the member phone number
             var memberPhone = document.createElement('p');
             memberPhone.textContent = 'Phone: ' + member.phone;
-  
+
             // Create a paragraph element for the member website
             var memberWebsite = document.createElement('p');
             var websiteLink = document.createElement('a');
             websiteLink.href = member.website;
             websiteLink.textContent = 'Website';
             memberWebsite.appendChild(websiteLink);
-  
+
             // Append the member details to the member card or list item
             memberItem.appendChild(memberImage);
             memberItem.appendChild(memberName);
             memberItem.appendChild(memberAddress);
             memberItem.appendChild(memberPhone);
             memberItem.appendChild(memberWebsite);
-  
+
             // Append the member card or list item to the container
             container.appendChild(memberItem);
           });
-  
+
           // Append the container to the main element
           main.appendChild(container);
         });

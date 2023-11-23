@@ -42,18 +42,7 @@ body {
     color: #fff;
     text-decoration: none;
   }
-
-h1, h2, h3 {
-      color: #333;
-    }
-    ul {
-      list-style-type: disc;
-      margin-left: 20px;
-    }
-    p {
-      margin-bottom: 10px;
-    }
-
+  
   /* Main content styles */
   main {
     background-color: #fff;
@@ -163,7 +152,22 @@ h1, h2, h3 {
     border-radius: 4px;
     cursor: pointer;
   }
+
+  #members{
+    background-color: rgb(0, 255, 238);
+    font-style: italic;
+    color: purple;
+  }
+
+  h2{
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 3, 8, 0.5)
+  }
   
+  h1{
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(186, 252, 4, 0.5)
+  }
   button[type="submit"]:hover {
     background-color: #1e2839;
   }

@@ -16,7 +16,11 @@ body {
   /* Sidebar styles */
   .sidebar {
     background-color: lightblue;
+    color: purple;
     padding: 20px;
+    font-style: italic;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 3, 8, 0.5)
   }
   
   /* Image gallery styles */
@@ -37,6 +41,19 @@ body {
     height: auto;
   }
 
+  .nav-link:hover{
+    color: rgb(8, 115, 40);
+  }
+
+  nav a {
+    color: #26032a;
+    text-decoration: none;
+    padding: 5px;
+    font-style: italic;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 3, 8, 0.5)
+  }
+  
   .dark-mode {
     background-color: black;
     color: white;
@@ -99,6 +116,7 @@ body {
     font-weight: bold;
     text-shadow: 2px 2px 4px rgba(8, 0, 0, 0.5);
     font-style: italic;
+    color: purple;
   }
 
   @media (min-width: 768px) {
@@ -111,6 +129,10 @@ body {
       order: 2;
       margin-left: 0;
     }
+  }
+
+  button:hover {
+    background-color: hotpink;
   }
   
   .navigation li {

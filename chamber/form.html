@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Form</title>
   <link rel="stylesheet" href="styles/form.css">
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.jpg">
 </head>
 <body>
   <header>
@@ -16,9 +18,12 @@
   <nav>
     <!-- Navigation menu for your course home page -->
     <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Contact</a></li>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="discover.html" class="nav-link" target="_blank">Discover</a></li>
+        <li><a href="directory.html" class="nav-link" target="_blank">Directory</a></li>
+        <li><a href="form.html" class="nav-link" target="_blank">Join</a></li>
+        <li class="nav-item social-link"><a href="https://www.facebook.com"><img src="facebook.png" alt="Facebook"></a></li>
+        <li class="nav-item social-link"><a href="https://www.twitter.com"><img src="twitter.png" alt="Twitter"></a></li>
     </ul>
     <!-- Other navigation elements -->
   </nav>
@@ -40,8 +45,14 @@
       <label for="page-rating">Page Rating:</label>
       <input type="range" id="page-rating" name="page-rating" min="1" max="10" step="1">
       <output for="page-rating"></output>
-
-      <button type="submit">Submit</button>
+      <label for="membership">Membership:</label>
+      <select id="membership" name="membership">
+        <option value="bronze">Bronze - $250 per year</option>
+        <option value="silver">Silver - $500 per year</option>
+        <option value="gold">Gold - $1000 per year</option>
+        <option value="np">Non-Profit - Free</option>
+      </select>
+      <button type="submit">Join Us</button>
 
       <form method="get" action="record.html"></form>
     </form>

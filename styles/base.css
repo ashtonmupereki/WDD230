@@ -78,10 +78,15 @@ nav li {
   justify-content: center; /* Center the items horizontally */
 }
 
+button:hover {
+  background-color: hotpink;
+}
+
 nav a {
   color: #fff;
   text-decoration: none;
   padding: 5px;
+  box-shadow:red;
 }
 
 /* Style the main content section */
@@ -168,7 +173,10 @@ h2 {
   font-style: italic;
 }
 
-
+.dark-mode {
+  background-color: black;
+  color: white;
+}
 
 .Card1 {
   background-color: rgb(130, 241, 204);

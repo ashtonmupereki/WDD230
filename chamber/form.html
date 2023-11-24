@@ -5,20 +5,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Form</title>
   <link rel="stylesheet" href="styles/form.css">
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.jpg">
 </head>
 <body>
   <header>
     <!-- Header content for your course home page -->
-    <h1>WDD230 - Web Development</h1>
+    <h1>Midlands Chamber Of Commerce</h1>
     <!-- Other header elements -->
   </header>
 
   <nav>
     <!-- Navigation menu for your course home page -->
     <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Contact</a></li>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="discover.html" class="nav-link" target="_blank">Discover</a></li>
+        <li><a href="directory.html" class="nav-link" target="_blank">Directory</a></li>
+        <li><a href="form.html" class="nav-link" target="_blank">Join</a></li>
+        <li class="nav-item social-link"><a href="https://www.facebook.com"><img src="facebook.png" alt="Facebook"></a></li>
+        <li class="nav-item social-link"><a href="https://www.twitter.com"><img src="twitter.png" alt="Twitter"></a></li>
     </ul>
     <!-- Other navigation elements -->
   </nav>
@@ -40,8 +45,53 @@
       <label for="page-rating">Page Rating:</label>
       <input type="range" id="page-rating" name="page-rating" min="1" max="10" step="1">
       <output for="page-rating"></output>
+      <label for="membership">Membership:</label>
+      <select id="membership" name="membership">
+        <option value="bronze">Bronze - $250 per year</option>
+        <option value="silver">Silver - $500 per year</option>
+        <option value="gold">Gold - $1000 per year</option>
+        <option value="np">Non-Profit - Free</option>
+      </select>
+      <button type="submit">Join Us</button>
+      <section id="members">
+        <h2>Membership Benefits</h2>
 
-      <button type="submit">Submit</button>
+        <h3>Non-Profit Membership</h3>
+        <h4>Benefits:</h4>
+        <ul>
+          <li>Access to the virtual hub for networking and business opportunities</li>
+          <li>Valuable insights and industry updates for navigating global business</li>
+          <li>Resource center with research materials and tools</li>
+        </ul>
+      
+        <h3>Bronze Membership</h3>
+        <h4>Benefits:</h4>
+        <ul>
+          <li>All Non-Profit Membership benefits</li>
+          <li>Booth Reservation at Local Events</li>
+          <li>15% Discount from Other Chamber Businesses</li>
+          <li>Bi-Monthly Workshops and Seminars</li>
+        </ul>
+      
+        <h3>Silver Membership</h3>
+        <h4>Benefits:</h4>
+        <ul>
+          <li>All Bronze Membership benefits</li>
+          <li>Monthly Networking Events</li>
+          <li>Access to Exclusive Industry Reports</li>
+          <li>Priority Access to Business Consultations</li>
+        </ul>
+      
+        <h3>Gold Membership</h3>
+        <h4>Benefits:</h4>
+        <ul>
+          <li>All Silver Membership benefits</li>
+          <li>Featured Listing in Member Directory</li>
+          <li>Annual Business Awards Eligibility</li>
+          <li>VIP Access to Conferences and Trade Shows</li>
+          <li>Complimentary Business Mentoring Program</li>
+        </ul>
+      </section>
 
       <form method="get" action="record.html"></form>
     </form>

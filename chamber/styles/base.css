@@ -32,7 +32,25 @@ a {
   border-radius: 4px;
   transition: background-color 0.3s ease;
 }
+.nav-link:hover{
+  color: yellow;
+}
+nav a {
+  text-decoration: none;
+  padding: 5px;
+  font-style: italic;
+  font-weight: bold;
+  text-shadow: red
+  
+}
 
+h1, h2, h3{
+  text-decoration: none;
+  padding: 5px;
+  font-style: italic;
+  font-weight: bold;
+  text-shadow: red
+}
 .join-button:hover {
   background-color: #ffa500;
 }
@@ -136,7 +154,9 @@ footer {
   text-align: center;
   font-family: "Arial Rounded MT Bold", sans-serif;
 }
-
+button:hover {
+  background-color: hotpink;
+}
 
 footer p {
   color: #fff;

@@ -81,6 +81,68 @@ body {
     font-weight: bold;
     color: #1e2839;
   }
+
+  label[for="membership"] {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    position: relative;
+  }
+
+  .navigation {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content:right;
+  }
+  
+  .nav-link:hover{
+    color: rgb(215, 247, 74);
+  }
+  
+  .nav-item {
+    margin-left: 10px;
+  }
+
+  nav a {
+    color: #26032a;
+    text-decoration: none;
+    padding: 5px;
+    font-style: italic;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 3, 8, 0.5);
+    justify-content: end;
+  }
+
+  .navigation {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .navigation li {
+    display: inline-block;
+    margin-right: 10px;
+  }
+
+  label[for="membership"]::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #333;
+  }
+
+  select#membership {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+  }
   
   button[type="submit"] {
     background-color: #375a7f;
@@ -90,7 +152,26 @@ body {
     border-radius: 4px;
     cursor: pointer;
   }
+
+  #members ul li{
+    background-color: antiquewhite;
+  }
+
+  #members{
+    background-color: rgb(0, 255, 238);
+    font-style: italic;
+    color: purple;
+  }
+
+  h2{
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 3, 8, 0.5)
+  }
   
+  h1{
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(186, 252, 4, 0.5)
+  }
   button[type="submit"]:hover {
     background-color: #1e2839;
   }

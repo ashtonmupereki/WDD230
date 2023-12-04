@@ -1,0 +1,22 @@
+{
+    "rentals": [
+      {
+        "name": "Honda Metropolitan Scooter",
+        "image": "https://wieck-honda-production.s3.amazonaws.com/photos/411bd0d0ec66f29833c69f57168555bf61dfe272/preview-928x522.jpg",
+        "description": "Perfect for solo riders. Explore the island with ease.",
+        "price": 40 
+      },
+      {
+        "name": "Honda Pioneer ATV",
+        "image": "https://www.maximimages.com/stock-photo/2015-honda-pioneer-500-sxs-atv-MXI28882.jpg",
+        "description": "Experience the thrill of off-roading with friends or family.",
+        "price": 80
+      },
+      {
+        "name": "Jeep Wrangler",
+        "image": "https://www.outdoortoys.com/cdn/shop/products/jeep-wrangler-rubicon-12v-electric-ride-on-jeep-657870_1600x.jpg?v=1697047257",
+        "description": "Go on an adventure and discover hidden gems on the island.",
+        "price": 120
+      }
+    ]
+  }

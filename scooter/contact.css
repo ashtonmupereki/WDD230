@@ -1,0 +1,96 @@
+/* Styles for the main section */
+main {
+    padding: 20px;
+  }
+  
+  .contact-section {
+    margin-bottom: 40px;
+  }
+  
+  .contact-section h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .contact-info {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .contact-details,
+  .map-container {
+    flex-basis: 48%;
+  }
+  
+  .contact-details h3,
+  .map-container h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .contact-details p {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+  .map {
+    height: 300px; /* Adjust the height as needed */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 50px;
+  }
+  
+  .contact-form {
+    margin-top: 40px;
+  }
+  
+  .contact-form h3 {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  
+  .form-field {
+    margin-bottom: 20px;
+  }
+  
+  label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    width: 40%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  input[type="submit"] {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  input[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Media queries for responsiveness */
+  @media (max-width: 768px) {
+    .contact-info {
+      flex-wrap: wrap;
+    }
+  
+    .contact-details,
+    .map-container {
+      flex-basis: 100%;
+    }
+  }

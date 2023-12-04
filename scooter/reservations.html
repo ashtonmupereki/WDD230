@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scoots Company - Reservations</title>
+    <link rel="stylesheet" href="abc.css">
+    <link rel="stylesheet" href="reservations.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="#" class="nav-branding">Scoots🛵</a>
+            <ul  class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="rentals.html" class="nav-link">Rentals</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <h1>Make a Reservation</h1>
+        <form id="reservation-form">
+            <div class="form-group">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+            <div class="form-group">
+                <label for="rental-type">Rental Type:</label>
+                <select id="rental-type" name="rental-type" required>
+                    <option value="">Select a rental type</option>
+                    <option value="scooter">Honda Metropolitan Scooter</option>
+                    <option value="atv">Honda Pioneer ATV</option>
+                    <option value="jeep">Jeep Wrangler</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="date">Pickup Date:</label>
+                <input type="date" id="date" name="date" required>
+            </div>
+            <div class="form-group">
+                <label for="period">Rental Period (in days):</label>
+                <input type="number" id="period" name="period" required>
+            </div>
+            <div class="form-group">
+                <label for="home-location">Home State or Country:</label>
+                <input type="text" id="home-location" name="home-location" required>
+            </div>
+            <div class="form-group">
+                <label for="cruise-line">Cruise Line (if applicable):</label>
+                <input type="text" id="cruise-line" name="cruise-line">
+            </div>
+            <div class="form-group">
+                <label for="accommodations">Special Accommodations/Comments:</label>
+                <textarea id="accommodations" name="accommodations"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="drop-off-request">Drop-off Request:</label>
+                <input type="text" id="drop-off-request" name="drop-off-request">
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn">Submit</button>
+            </div>
+        </form>
+    </main>
+    <script src="abc.js"></script>
+</body>
+</html>

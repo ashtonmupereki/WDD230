@@ -5,9 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Scoots Company - Rentals</title>
     <link rel="stylesheet" href="abc.css">
+
+    <link rel="icon" href="motorcycle.png" type="image/x-icon">
 </head>
 <body>
     <header>
+        <div class="toggle-container">
+            <input type="checkbox" id="toggle" class="toggle-input">
+            <label for="toggle" class="toggle-label">
+                <span class="toggle-icon" id="sun-icon"><i class="fas fa-sun"></i></span>
+                <span class="toggle-icon" id="moon-icon"><i class="fas fa-moon"></i></span>
+            </label>
+        </div>
         <nav class="navbar">
             <a href="#" class="nav-branding">Scoots🛵</a>
             <ul  class="nav-menu">
@@ -32,13 +41,30 @@
         </nav>
     </header>
     <main>
-        <h1>Rentals</h1>
-        <section class="rental-options">
-            
-        </section>
+        <table id="rental-table">
+            <thead>
+              <tr>
+                <th>Rental Type</th>
+                <th>Max. Persons</th>
+                <th>Half Day (Reservation)</th>
+                <th>Full Day (Reservation)</th>
+                <th>Half Day (Walk-In)</th>
+                <th>Full Day (Walk-In)</th>
+              </tr>
+            </thead>
+            <tbody id="rental-table-body"></tbody>
+          </table>
     </main>
     
     <script src="abc.js"></script>
     <script src="rentals.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const toggleInput = document.querySelector(".toggle-input");
+            toggleInput.addEventListener("change", function() {
+                document.body.classList.toggle("dark-mode");
+            });
+        });
+    </script>
 </body>
 </html>

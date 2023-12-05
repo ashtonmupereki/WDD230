@@ -5,17 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Scoots Company</title>
     <link rel="stylesheet" href="abc.css">
+
+    <link rel="icon" href="motorcycle.png" type="image/x-icon">
 </head>
 <body>
     <header>
+        <div class="toggle-container">
+            <input type="checkbox" id="toggle" class="toggle-input">
+            <label for="toggle" class="toggle-label">
+                <span class="toggle-icon" id="sun-icon"><i class="fas fa-sun"></i></span>
+                <span class="toggle-icon" id="moon-icon"><i class="fas fa-moon"></i></span>
+            </label>
+        </div>
         <nav class="navbar">
             <a href="#" class="nav-branding">Scoots🛵</a>
             <ul  class="nav-menu">
                 <li class="nav-item">
-                    <a href="#" class="nav-link">Home</a>
+                    <a href="#" class="nav-link">Home🌟</a>
                 </li>
                 <li class="nav-item">
-                    <a href="rentals.html" class="nav-link">Rentals</a>
+                    <a href="rentals.html" class="nav-link">Rentals💲</a>
                 </li>
                 <li class="nav-item">
                     <a href="reservations.html" class="nav-link">Reservations</a>
@@ -63,10 +72,17 @@
     <section class="weather">
         <h2>Current Weather</h2>
         <div id="weather-info">
-            <p>Loading...</p> <!-- Placeholder for weather information -->
         </div>
     </section>
 </main>
     <script src="abc.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const toggleInput = document.querySelector(".toggle-input");
+            toggleInput.addEventListener("change", function() {
+                document.body.classList.toggle("dark-mode");
+            });
+        });
+    </script>
 </body>
 </html>

@@ -1,48 +1,55 @@
-// abc.js
-document.addEventListener("DOMContentLoaded", function() {
-    const rentalOptions = document.querySelector(".rental-options");
-
-    // Fetch the JSON data
-    fetch("rentals.json")
-        .then(response => response.json())
-        .then(data => {
-            data.rentals.forEach(rental => {
-                // Create a rental card
-                const rentalCard = document.createElement("div");
-                rentalCard.classList.add("rental-card");
-
-                // Set the rental image
-                const image = document.createElement("img");
-                image.src = rental.image;
-                image.alt = rental.name;
-                rentalCard.appendChild(image);
-
-                // Set the rental name
-                const name = document.createElement("h2");
-                name.textContent = rental.name;
-                rentalCard.appendChild(name);
-
-                // Set the rental description
-                const description = document.createElement("p");
-                description.textContent = rental.description;
-                rentalCard.appendChild(description);
-
-                // Set the rental price
-                const price = document.createElement("p");
-                price.classList.add("price");
-                price.textContent = `$${rental.price} per day`;
-                rentalCard.appendChild(price);
-
-                // Create a "Rent Now" button
-                const rentNowButton = document.createElement("a");
-                rentNowButton.href = "reservations.html";
-                rentNowButton.classList.add("btn");
-                rentNowButton.textContent = "Rent Now";
-                rentalCard.appendChild(rentNowButton);
-
-                // Append the rental card to the rental options section
-                rentalOptions.appendChild(rentalCard);
-            });
-        })
-        .catch(error => console.error(error));
-});
+// Function to fetch JSON data
+async function fetchRentalData() {
+    try {
+      const response = await fetch('rentals.json');
+      const data = await response.json();
+      return data.rentals;
+    } catch (error) {
+      console.error('Error fetching rental data:', error);
+      return [];
+    }
+  }
+  
+  // Function to generate the table rows
+  function generateTableRows(rentals) {
+    const tableBody = document.getElementById('rental-table-body');
+    
+    rentals.forEach((rental) => {
+      const row = document.createElement('tr');
+      
+      const rentalTypeCell = document.createElement('td');
+      rentalTypeCell.textContent = rental.type;
+      row.appendChild(rentalTypeCell);
+      
+      const maxPersonsCell = document.createElement('td');
+      maxPersonsCell.textContent = rental.maxPersons;
+      row.appendChild(maxPersonsCell);
+      
+      const halfDayReservationCell = document.createElement('td');
+      halfDayReservationCell.textContent = `$${rental.halfDayReservation}`;
+      row.appendChild(halfDayReservationCell);
+      
+      const fullDayReservationCell = document.createElement('td');
+      fullDayReservationCell.textContent = `$${rental.fullDayReservation}`;
+      row.appendChild(fullDayReservationCell);
+      
+      const halfDayWalkInCell = document.createElement('td');
+      halfDayWalkInCell.textContent = `$${rental.halfDayWalkIn}`;
+      row.appendChild(halfDayWalkInCell);
+      
+      const fullDayWalkInCell = document.createElement('td');
+      fullDayWalkInCell.textContent = `$${rental.fullDayWalkIn}`;
+      row.appendChild(fullDayWalkInCell);
+      
+      tableBody.appendChild(row);
+    });
+  }
+  
+  // Function to initialize the rental table
+  async function initializeRentalTable() {
+    const rentals = await fetchRentalData();
+    generateTableRows(rentals);
+  }
+  
+  // Call the initialization function
+  initializeRentalTable();

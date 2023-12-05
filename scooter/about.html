@@ -6,9 +6,18 @@
     <title>Scoots Company</title>
     <link rel="stylesheet" href="abc.css">
     <link rel="stylesheet" href="about.css">
+
+    <link rel="icon" href="motorcycle.png" type="image/x-icon">
 </head>
 <body>
     <header>
+        <div class="toggle-container">
+            <input type="checkbox" id="toggle" class="toggle-input">
+            <label for="toggle" class="toggle-label">
+                <span class="toggle-icon" id="sun-icon"><i class="fas fa-sun"></i></span>
+                <span class="toggle-icon" id="moon-icon"><i class="fas fa-moon"></i></span>
+            </label>
+        </div>
         <nav class="navbar">
             <a href="#" class="nav-branding">Scoots🛵</a>
             <ul  class="nav-menu">
@@ -72,5 +81,13 @@
         </section>
     </main>
     <script src="abc.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const toggleInput = document.querySelector(".toggle-input");
+            toggleInput.addEventListener("change", function() {
+                document.body.classList.toggle("dark-mode");
+            });
+        });
+    </script>
 </body>
 </html>

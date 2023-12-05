@@ -1,22 +1,52 @@
 {
-    "rentals": [
-      {
-        "name": "Honda Metropolitan Scooter",
-        "image": "https://wieck-honda-production.s3.amazonaws.com/photos/411bd0d0ec66f29833c69f57168555bf61dfe272/preview-928x522.jpg",
-        "description": "Perfect for solo riders. Explore the island with ease.",
-        "price": 40 
-      },
-      {
-        "name": "Honda Pioneer ATV",
-        "image": "https://www.maximimages.com/stock-photo/2015-honda-pioneer-500-sxs-atv-MXI28882.jpg",
-        "description": "Experience the thrill of off-roading with friends or family.",
-        "price": 80
-      },
-      {
-        "name": "Jeep Wrangler",
-        "image": "https://www.outdoortoys.com/cdn/shop/products/jeep-wrangler-rubicon-12v-electric-ride-on-jeep-657870_1600x.jpg?v=1697047257",
-        "description": "Go on an adventure and discover hidden gems on the island.",
-        "price": 120
-      }
-    ]
-  }
+  "rentals": [
+    {
+      "type": "Honda Metro Scooter",
+      "maxPersons": 1,
+      "halfDayReservation": 20,
+      "fullDayReservation": 30,
+      "halfDayWalkIn": 25,
+      "fullDayWalkIn": 35
+    },
+    {
+      "type": "Honda Dio Scooter",
+      "maxPersons": 2,
+      "halfDayReservation": 30,
+      "fullDayReservation": 40,
+      "halfDayWalkIn": 35,
+      "fullDayWalkIn": 45
+    },
+    {
+      "type": "Honda PCX150 Scooter",
+      "maxPersons": 2,
+      "halfDayReservation": 40,
+      "fullDayReservation": 50,
+      "halfDayWalkIn": 45,
+      "fullDayWalkIn": 55
+    },
+    {
+      "type": "Honda Pioneer ATV",
+      "maxPersons": 4,
+      "halfDayReservation": 50,
+      "fullDayReservation": 70,
+      "halfDayWalkIn": 60,
+      "fullDayWalkIn": 80
+    },
+    {
+      "type": "Jeep Wrangler - 4 door with a/c",
+      "maxPersons": 5,
+      "halfDayReservation": 70,
+      "fullDayReservation": 100,
+      "halfDayWalkIn": 85,
+      "fullDayWalkIn": 125
+    },
+    {
+      "type": "Jeep Wrangler - 2 door",
+      "maxPersons": 4,
+      "halfDayReservation": 60,
+      "fullDayReservation": 85,
+      "halfDayWalkIn": 70,
+      "fullDayWalkIn": 90
+    }
+  ]
+}

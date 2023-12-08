@@ -11,10 +11,6 @@ document.querySelector(".nav-link").forEach(n => n.addEventListener("click",()=>
     navMenu.classList.remove("active");
 }))
 
-document.addEventListener("DOMContentLoaded", function () {
-  const toggleInput = document.querySelector(".toggle-input");
-  toggleInput.addEventListener("change", function () {
-    document.body.classList.toggle("dark-mode");
-  });
+
 
   

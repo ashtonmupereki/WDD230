@@ -42,6 +42,7 @@
         </nav>
     </header>
     <main>
+        <div id="thanks-message"></div>
         <section class="contact-section">
             <h2>Contact Us</h2>
             <div class="contact-info">
@@ -54,7 +55,7 @@
                 <div class="map-container">
                     <h3>Our Locations</h3>
                     <div class="map">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15047.218607338593!2d29.754380285739888!3d-19.46398746166073!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1934eb679f3da391%3A0x4c634bdd3737d9f2!2sMkoba!5e0!3m2!1sen!2szw!4v1695816866068!5m2!1sen!2szw" width="1350" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15047.218607338593!2d29.754380285739888!3d-19.46398746166073!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1934eb679f3da391%3A0x4c634bdd3737d9f2!2sMkoba!5e0!3m2!1sen!2szw!4v1695816866068!5m2!1sen!2szw" width="510" height="330" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                 </div>
             </div>
@@ -87,6 +88,17 @@
             toggleInput.addEventListener("change", function() {
                 document.body.classList.toggle("dark-mode");
             });
+        });
+    </script>
+    <script>
+        // Add an event listener to the form submission
+        document.getElementById("reservation-form").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent the default form submission behavior
+
+            // Perform any necessary form validation here
+
+            // Redirect to the "thanks.html" page
+            window.location.href = "thanks.html";
         });
     </script>
 </body>
